@@ -12,7 +12,7 @@ int run_instruction(char *line_content, node_t **stack_head, unsigned int line_c
 {
 	instruction_t instructions[] = {
 				
-                void push_node(node_t **stack, unsigned int value) {
+                push_node(node_t **stack, unsigned int value) {
                     "push"
                 }
                 {"pall", print_all},
