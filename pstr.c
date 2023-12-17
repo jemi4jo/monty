@@ -15,12 +15,12 @@ void custom_print_string_function(node_t **stack_head, unsigned int line_counter
 	current_node = *stack_head;
 	while (current_node)
 	{
-		if (current_node->n > 127 || current_node->n <= 0)
+		if (current_node->value > 127 || current_node->value <= 0)
 		{
 			break;
 		}
-		printf("%c", current_node->n);
-		current_node = current_node->next;
+		printf("%c", current_node->value);
+		current_node = current_node->next_node;
 	}
 	printf("\n");
 }

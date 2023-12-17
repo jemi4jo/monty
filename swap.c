@@ -14,7 +14,7 @@ void custom_swap_function(node_t **stack_head, unsigned int line_counter)
 	current_node = *stack_head;
 
 	for (num_nodes = 0; current_node != NULL; num_nodes++)
-		current_node = current_node->next;
+		current_node = current_node->next_node;
 
 	if (num_nodes < 2)
 	{
@@ -26,7 +26,7 @@ void custom_swap_function(node_t **stack_head, unsigned int line_counter)
 	}
 
 	current_node = *stack_head;
-	temp = current_node->n;
-	current_node->n = current_node->next->n;
-	current_node->next->n = temp;
+	temp = current_node->value;
+	current_node->value = current_node->next_node->value;
+	current_node->next_node->value = temp;
 }

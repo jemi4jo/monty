@@ -10,7 +10,7 @@ void set_queue_mode(node_t **stack_head, unsigned int line_counter)
 {
 	(void)stack_head;
 	(void)line_counter;
-	data.mode = 1;
+	data.lifo_flag = 1;
 }
 
 /**
@@ -31,23 +31,23 @@ void add_node_to_queue(node_t **stack_head, int new_value)
 		printf("Error\n");
 	}
 
-	new_node->n = new_value;
-	new_node->next = NULL;
+	new_node->value = new_value;
+	new_node->next_node = NULL;
 
 	if (current_node)
 	{
-		while (current_node->next)
-			current_node = current_node->next;
+		while (current_node->next_node)
+			current_node = current_node->next_node;
 	}
 
 	if (!current_node)
 	{
 		*stack_head = new_node;
-		new_node->prev = NULL;
+		new_node->prev_node = NULL;
 	}
 	else
 	{
-		current_node->next = new_node;
-		new_node->prev = current_node;
+		current_node->next_node = new_node;
+		new_node->prev_node = current_node;
 	}
 }

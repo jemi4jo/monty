@@ -11,7 +11,7 @@ void release_stack(node_t *stack_head)
 	temp = stack_head;
 	while (stack_head)
 	{
-		temp = stack_head->next;
+		temp = stack_head->next_node;
 		free(stack_head);
 		stack_head = temp;
 	}

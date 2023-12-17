@@ -20,6 +20,6 @@ void custom_pop_function(node_t **stack_head, unsigned int line_counter)
 	}
 
 	current_node = *stack_head;
-	*stack_head = current_node->next;
+	*stack_head = current_node->next_node;
 	free(current_node);
 }

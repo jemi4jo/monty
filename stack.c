@@ -10,5 +10,5 @@ void set_stack_mode(node_t **stack_head, unsigned int line_counter)
 {
 	(void)stack_head;
 	(void)line_counter;
-	data.mode = 0;
+	data.lifo_flag = 0;
 }

@@ -10,21 +10,21 @@ void custom_rotate_left_function(node_t **stack_head, __attribute__((unused)) un
 {
 	node_t *tmp = *stack_head, *aux;
 
-	if (*stack_head == NULL || (*stack_head)->next == NULL)
+	if (*stack_head == NULL || (*stack_head)->next_node == NULL)
 	{
 		return;
 	}
 
-	aux = (*stack_head)->next;
-	aux->prev = NULL;
+	aux = (*stack_head)->next_node;
+	aux->prev_node = NULL;
 
-	while (tmp->next != NULL)
+	while (tmp->next_node != NULL)
 	{
-		tmp = tmp->next;
+		tmp = tmp->next_node;
 	}
 
-	tmp->next = *stack_head;
-	(*stack_head)->next = NULL;
-	(*stack_head)->prev = tmp;
+	tmp->next_node = *stack_head;
+	(*stack_head)->next_node = NULL;
+	(*stack_head)->prev_node = tmp;
 	(*stack_head) = aux;
 }

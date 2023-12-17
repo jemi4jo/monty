@@ -41,7 +41,7 @@ int interpret_monty_code(int argument_count, char *argument_values[])
 
 		if (read_result > 0)
 		{
-			run_instruction(line_content, &stack_head, line_counter, monty_file);
+			process_instruction(line_content, &stack_head, line_counter, monty_file);
 		}
 
 		free(line_content);

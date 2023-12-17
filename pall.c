@@ -14,7 +14,7 @@ void custom_print_all_function(node_t **stack_head, unsigned int line_counter)
 	current_node = *stack_head;
 	while (current_node)
 	{
-		printf("%d\n", current_node->n);
-		current_node = current_node->next;
+		printf("%d\n", current_node->value);
+		current_node = current_node->next_node;
 	}
 }

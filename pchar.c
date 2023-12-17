@@ -21,7 +21,7 @@ void custom_print_char_function(node_t **stack_head, unsigned int line_counter)
 		exit(EXIT_FAILURE);
 	}
 
-	if (current_node->n > 127 || current_node->n < 0)
+	if (current_node->value > 127 || current_node->value < 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_counter);
 		fclose(data.monty_file);
@@ -30,5 +30,5 @@ void custom_print_char_function(node_t **stack_head, unsigned int line_counter)
 		exit(EXIT_FAILURE);
 	}
 
-	printf("%c\n", current_node->n);
+	printf("%c\n", current_node->value);
 }

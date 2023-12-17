@@ -16,5 +16,5 @@ void custom_print_integer_function(node_t **stack_head, unsigned int line_counte
 		release_stack(*stack_head);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", (*stack_head)->n);
+	printf("%d\n", (*stack_head)->value);
 }

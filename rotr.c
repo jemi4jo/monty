@@ -12,19 +12,19 @@ void custom_rotate_right_function(node_t **stack_head, __attribute__((unused)) u
 
 	copy = *stack_head;
 
-	if (*stack_head == NULL || (*stack_head)->next == NULL)
+	if (*stack_head == NULL || (*stack_head)->next_node == NULL)
 	{
 		return;
 	}
 
-	while (copy->next)
+	while (copy->next_node)
 	{
-		copy = copy->next;
+		copy = copy->next_node;
 	}
 
-	copy->next = *stack_head;
-	copy->prev->next = NULL;
-	copy->prev = NULL;
-	(*stack_head)->prev = copy;
+	copy->next_node = *stack_head;
+	copy->prev_node->next_node = NULL;
+	copy->prev_node = NULL;
+	(*stack_head)->prev_node = copy;
 	(*stack_head) = copy;
 }

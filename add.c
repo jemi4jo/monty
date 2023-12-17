@@ -6,9 +6,9 @@
  * @line_counter: line_number
  * Return: no return
 */
-void custom_add_function(stack_t **stack_head, unsigned int line_counter)
+void custom_add_function(node_t **stack_head, unsigned int line_counter)
 {
-	stack_t *current_node;
+	node_t *current_node;
 	int stack_length = 0, result;
 
 	current_node = *stack_head;

@@ -66,10 +66,10 @@ int process_instruction(char *line_content, node_t **stack, unsigned int line_nu
 void release_stack(node_t *stack);
 void pop_node(node_t **stack, unsigned int line_number);
 void swap_nodes(node_t **stack, unsigned int line_number);
-void add_nodes(node_t **stack, unsigned int line_number);
+void custom_add_function(node_t **stack, unsigned int line_number);
 void no_operation(node_t **stack, unsigned int line_number);
 void subtract_nodes(node_t **stack, unsigned int line_number);
-void divide_nodes(node_t **stack, unsigned int line_number);
+void custom_divide_function(node_t **stack, unsigned int line_number);
 void multiply_nodes(node_t **stack, unsigned int line_number);
 void modulo_nodes(node_t **stack, unsigned int line_number);
 void print_char(node_t **stack, unsigned int line_number);

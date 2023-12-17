@@ -14,7 +14,7 @@ void custom_subtract_function(node_t **stack_head, unsigned int line_counter)
 	current_node = *stack_head;
 
 	for (num_nodes = 0; current_node != NULL; num_nodes++)
-		current_node = current_node->next;
+		current_node = current_node->next_node;
 
 	if (num_nodes < 2)
 	{
@@ -26,8 +26,8 @@ void custom_subtract_function(node_t **stack_head, unsigned int line_counter)
 	}
 
 	current_node = *stack_head;
-	result = current_node->next->n - current_node->n;
-	current_node->next->n = result;
-	*stack_head = current_node->next;
+	result = current_node->next_node->value - current_node->value;
+	current_node->next_node->value = result;
+	*stack_head = current_node->next_node;
 	free(current_node);
 }
