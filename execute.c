@@ -11,7 +11,10 @@
 int run_instruction(char *line_content, node_t **stack_head, unsigned int line_counter, FILE *monty_file)
 {
 	instruction_t instructions[] = {
-				{"push", push_node},
+				
+                void push_node(node_t **stack, unsigned int value) {
+                    "push"
+                }
                 {"pall", print_all},
                 {"pint", print_integer},
 				{"pop", pop_node},
