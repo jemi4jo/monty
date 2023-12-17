@@ -59,7 +59,7 @@ typedef struct instruction_s
 char *_resize(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t readstdin(char **lineptr, int file);
 char  *sanitize_line(char *line_content);
-void push_node(node_t **stack, unsigned int value);
+void push(node_t **stack, unsigned int value);
 void print_all(node_t **stack, unsigned int line_number);
 void print_integer(node_t **stack, unsigned int line_number);
 int process_instruction(char *line_content, node_t **stack, unsigned int line_number, FILE *file);
