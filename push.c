@@ -39,7 +39,7 @@ void custom_push_function(node_t **stack_head, unsigned int line_counter)
 
 	value = atoi(data.argument);
 	if (data.lifo_flag == 0)
-		add_node_to_stack(stack_head, value);
+		insert_node(stack_head, value);
 	else
-		add_node_to_queue(stack_head, value);
+		enqueue_node(stack_head, value);
 }
