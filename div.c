@@ -14,7 +14,7 @@ void custom_divide_function(node_t **stack_head, unsigned int line_counter)
 	current_node = *stack_head;
 	while (current_node)
 	{
-		current_node = current_node->next;
+		current_node = current_node->next_node;
 		stack_length++;
 	}
 
@@ -28,7 +28,7 @@ void custom_divide_function(node_t **stack_head, unsigned int line_counter)
 	}
 
 	current_node = *stack_head;
-	if (current_node->n == 0)
+	if (current_node->value == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", line_counter);
 		fclose(data.monty_file);
@@ -37,8 +37,8 @@ void custom_divide_function(node_t **stack_head, unsigned int line_counter)
 		exit(EXIT_FAILURE);
 	}
 
-	result = current_node->next->n / current_node->n;
-	current_node->next->n = result;
-	*stack_head = current_node->next;
+	result = current_node->next_node->value / current_node->value;
+	current_node->next_node->value = result;
+	*stack_head = current_node->next_node;
 	free(current_node);
 }

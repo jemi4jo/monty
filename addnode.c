@@ -18,10 +18,10 @@ void insert_new_node(node_t **stack_head, int new_value)
 		exit(0);
 	}
 	if (current_node)
-		current_node->prev = new_node;
+		current_node->prev_node = new_node;
 
-	new_node->n = new_value;
-	new_node->next = *stack_head;
-	new_node->prev = NULL;
+	new_node->value = new_value;
+	new_node->next_node = *stack_head;
+	new_node->prev_node = NULL;
 	*stack_head = new_node;
 }
